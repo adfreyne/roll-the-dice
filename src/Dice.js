@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
 class Dice extends PureComponent {
     render () {
         const { diceResults, dice } = this.props;
         let x = diceResults.map((d, idx) => {
             return (
-                <p key={idx}>
+                <li key={idx}>
           Dice {idx + 1}: {dice[d]}
-                </p>
+                </li>
             );
         });
         return x;
@@ -21,8 +22,7 @@ const mapStateToProps = (state) => ({
 Dice.propTypes = {
     diceResults: PropTypes.array,
     dispatch: PropTypes.func,
-    dice: PropTypes.array,
-    number: PropTypes.string
+    dice: PropTypes.array
 
 };
 export default connect(mapStateToProps)(Dice);
