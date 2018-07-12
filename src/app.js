@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react';
 import { roll } from './store';
 import { connect } from 'react-redux';
-
+import Dice from './Dice';
 
 class App extends PureComponent {
     render () {
-        const { dispatch, dices, dice } = this.props;
+        const { dispatch } = this.props;
         return (
             <div>
                 <button onClick={() => {
@@ -13,12 +13,8 @@ class App extends PureComponent {
                 }}>
                     Roll'em
                 </button>
-                <p >
-                    Dice 1: {dice[dices[0]]}
-                </p>
-                <p>
-                    Dice 2: {dice[dices[1]]}
-                </p>
+
+                <Dice />
             </div >
         );
     }
