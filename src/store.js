@@ -7,8 +7,9 @@ const initialState = {
 
 export const roll = () => {
     let dices = [];
-    dices[0] = Math.floor(Math.random() * 6);
-    dices[1] = Math.floor(Math.random() * 6);
+    for (var x = 0; x < 2; x++) {
+        dices[x] = Math.floor(Math.random() * 6);
+    }
     return dices;
 };
 
