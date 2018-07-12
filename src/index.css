@@ -2,4 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: yellow;
+  font-size: 2em;
+  text-align: center;
+  background-color: darkcyan
 }
